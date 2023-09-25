@@ -15,6 +15,7 @@ const Card = styled.div`
   color: #444;
   border: 1px solid grey;
   border-radius: 10px;
+  box-shadow: 0.5px 4px 5px darkgrey;
 `;
 
 const ContentContainer = styled.div`

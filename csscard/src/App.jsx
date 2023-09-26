@@ -84,17 +84,26 @@ const StyledComponents = () => (
       <ContentContainer2>
         <Rate>Rate this album</Rate>
         <StarsDiv>
-          <div className="stars">
-            <span>★</span>
-            <span>★</span>
-            <span>★</span>
-            <span>★</span>
-            <span>★</span>
-          </div>
+          <ul>
+            <div className="stars">
+              {Array(5).fill().map((_, index) => (
+                <span key={index}>★</span>
+              ))}
+            </div>
+          </ul>
         </StarsDiv>
       </ContentContainer2>
     </Card>
-  </Container>
+  </Container >
 );
+
+// Le code {Array(5).fill(.map((_, index) => ( <span key={index}></span> ))} crée un
+// tableau de longueur 5 en utilisant la syntaxe Array(5). La méthode `fill()`
+// est utilisée pour remplir le tableau avec des valeurs non définies. Ensuite, la
+// méthode map() est utilisée pour parcourir chaque élément du tableau et renvoyer
+// un élément < span > <span /> contenant une étoile. La prop key est définie sur
+// l'index de chaque élément du tableau pour en garantir l'unicité. Ce code est
+// utilisé pour générer une rangée de symboles 5 étoiles pour noter l'album.
+
 
 export default StyledComponents;
